@@ -1,0 +1,13 @@
+@import '../../../styles/settings.scss';
+
+.sideNav {
+  height: 100vh;
+  width: 16.5em;
+  background-color: #1f1f2f;
+
+  &__logo {
+    color: $color-light;
+    background-color: #1a1a27;
+    padding: 1.4em;
+  }
+}
