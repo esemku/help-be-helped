@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Home.scss';
-//import {listData} from '../../data/dataStore';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import SideNav from './SideNav';
@@ -13,7 +12,7 @@ const Home = props => {
   return (
     <div className='home'>
       <SideNav />
-      <div>
+      <div className='container'>
         <Header />
         test
       </div>

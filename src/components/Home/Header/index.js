@@ -1,9 +1,12 @@
 import React from 'react'
+import styles from './Header.scss';
 
 
 const Header = props => {
   return (
-    <div>Header</div>
+    <div className='header'>
+      Header
+    </div>
   )
 }
 

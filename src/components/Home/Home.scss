@@ -1,18 +1,9 @@
 @import '../../styles/settings.scss';
 
 .home {
-  // border: 2px solid red;
   display: flex;
 }
 
-.homeContainer {
-  display: flex;
-  justify-content: center;
+.container {
+  width: calc(100% - 16.5em);
 }
-
-/*.title {
-  padding: ($base-size * 3) 0;
-  text-align: center;
-  font-size: ($base-size * 3);
-  text-transform: uppercase;
-}*/

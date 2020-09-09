@@ -47,7 +47,9 @@ const SideNavItems = props => {
               {item.list.map(l => {
                 return (
                   <li className='sideNavItems__list-item'>
-                    <i className={l.icon}></i>{l.title}
+                    <i className={`sideNavItems__i-item ${l.icon}`}></i>
+                    {l.title}
+                    <i class="fas fa-angle-right sideNavItems__i-angle"></i>
                   </li>
                 )
               })}

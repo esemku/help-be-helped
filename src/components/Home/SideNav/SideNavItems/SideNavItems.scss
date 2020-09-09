@@ -1,24 +1,56 @@
 @import '../../../../styles/settings.scss';
 
 .sideNavItems {
-  padding-left: 1.5em;
-  border: 1px solid red;
+  margin-bottom: 2em;
 
   &__title {
-    color: #4c4e6f;
+    color: $color-mid-grey;
     font-size: .8em;
     font-weight: 500;
     letter-spacing: .024em;
+    padding-left: 1.5em;
   }
 
   &__list-item {
     color: #a2a3b7;
     font-weight: 400;
     font-size: .82em;
+    padding: 1.1em 1.5em;
+    transition: all .2s ease-in-out;
   }
+  &__list-item:hover {
+    cursor: pointer;
+    background-color: $color-dark-grey;
+    color: $color-light;
+
+    .sideNavItems__i-angle {
+      color: $color-light;
+    }
+    .sideNavItems__i-item {
+      color: #3699FF;
+    }
+  }
+
   ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  &__i-item {
+    font-size: 1.3em;
+    padding-right: .5em;
+    color: $color-mid-grey;
+    transition: all .2s ease-in-out;
+  }
+
+  &__i-angle {
+    float: right;
+    font-size: 1em;
+    color: $color-mid-grey;
+    transition: all .2s ease-in-out;
+  }
+  i {
+    width: 1.8em;
   }
 }
