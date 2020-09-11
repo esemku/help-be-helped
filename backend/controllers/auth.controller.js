@@ -1,6 +1,6 @@
 const User = require('../models/auth.model')
 const expressJwt = require('express-jwt')
-const _ = require('loadash')
+const _ = require('lodash')
 const { OAuth2Client } = require('google-auth-library')
 const fetch = require('node-fetch')
 const { validationResult } = require('express-validator')
@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken')
 // Custom error handler to get useful error from database errors
 const { errorHandler } = require('../helpers/dbErrorHandling')
 const sgMail = require('@sendgrid/mail')
-
+sgMail.setApiKey(process.env.MAIL_KEY)
 
 exports.registerController = (req,res) => {
   const { name, email, password } = req.body
@@ -38,7 +38,34 @@ exports.registerController = (req,res) => {
         email,
         password
       },
-      process.env.JWT_ACCOUNT_ACTIVATION
+      process.env.JWT_ACCOUNT_ACTIVATION,
+      {
+        expiresIn: '15m'
+      }
     )
+
+    // Email data sending
+    const emailData = {
+      from: process.env.EMAIL_FROM,
+      to: email,
+      subject: 'Account activation link',
+      html: `
+        <h1>Please Click to link to activate</h1>
+        <p>${process.env.CLIENT_URL}/users/activate/${token}</p>
+        <hr/>
+        <p>This email contain sensitive info</p>
+        <p>${process.env.CLIENT_URL}</p>
+      `
+    }
+
+    sgMail.send(emailData).then(sent => {
+      return res.json({
+        message: `Email has been sent to ${email}`
+      })
+    }).catch(err => {
+      return res.status(400).json({
+        error: errorHandler(err)
+      })
+    })
   }
 }
