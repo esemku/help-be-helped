@@ -1,0 +1,77 @@
+@import '../../../styles/settings.scss';
+
+.layout {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  &__aside {
+    min-width: 25.1em;
+    max-width: 25.1em;
+    background-image: url('/media/images/auth/bg-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $color-light;
+    padding: 3em 2em 2em;
+  }
+
+  &__logo {
+    img {
+      max-height: 70px;
+    }
+  }
+
+  &__article {
+    margin-bottom: 1em;
+    h1 {
+      font-weight: 500;
+      font-size: $font-size-26;
+      margin-top: 0;
+    }
+    p {
+      opacity: 0.8;
+      font-weight: 100;
+      font-size: $font-size-13;
+    }
+  }
+
+  footer {
+    span {
+      opacity: 0.7;
+    }
+    a {
+      color: inherit;
+    }
+    font-size: $font-size-13;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.layout__main {
+  margin: 2em;
+  width: 100%;
+}
+
+.layout__main-acc {
+  display: flex;
+  justify-content: flex-end;
+  span {
+    color: rgb(126, 130, 153);
+    font-weight: 500;
+    font-size: $font-size-13;
+  }
+  a {
+    color: rgb(54, 153, 255);
+    font-weight: 500;
+    font-size: $font-size-13;
+    margin-left: 5px;
+  }
+}
+
+.layout__main-children {
+  display: flex;
+  justify-content: center;
+}

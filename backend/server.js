@@ -25,7 +25,6 @@ if(process.env.NODE_ENV === 'development'){
 
 
 // Load all routes
-
 const authRouter = require('./routes/auth.route')
 
 
@@ -55,11 +54,6 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully")
 })
 
-// const exercisesRouter = require('./routes/exercises')
-// const usersRouter = require('./routes/users')
-//
-// app.use('/exercises', exercisesRouter)
-// app.use('/users', usersRouter)
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`)

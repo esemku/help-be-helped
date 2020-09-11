@@ -17,8 +17,18 @@ body {
   // font-size: $base-size;
 }
 
-// :global(.container) {
-//   width: 90%;
-//   max-width: 1400px;
-//   margin: 0 auto;
-// }
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
