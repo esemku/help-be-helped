@@ -1,0 +1,71 @@
+@import './settings';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5em;
+
+  &__inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.7em;
+  }
+  &__input {
+    background-color: rgb(232, 240, 254);
+    border: none;
+    margin: 1em 0;
+    padding-left: 1.5em;
+    font-size: $font-size-12;
+    border-radius: $radius;
+    height: 4.17em;
+    width: 25rem;
+  }
+  &__input::placeholder {
+    color: #B5B5C3;
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__h1 {
+    font-size: $font-size-26;
+    font-weight: 500;
+    color: rgb(63, 66, 84);
+    margin-bottom: 0;
+  }
+  &__p {
+    color: rgb(181, 181, 195);
+    font-weight: 500;
+    font-size: $font-size-13;
+    margin-top: .6em;
+  }
+  &__btn-wrapper--primary {
+    margin: 10px 0 23px;
+  }
+  &__btn {
+    border-radius: $radius;
+    font-size: $font-size-13;
+    font-weight: 500;
+    height: 3.6em;
+    width: 8.1em;
+    margin: 9.75px 13px;
+  }
+  &__btn--submit {
+    background-color: $color-blue;
+    color: $color-light;
+  }
+  &__btn--cancel {
+    background-color: rgb(225, 240, 255);
+    color: $color-blue;
+    &:hover {
+      background-color: $color-blue;
+      color: $color-light;
+    }
+  }
+
+  &__checkbox-wrapper {
+    align-self: flex-start;
+  }
+}
