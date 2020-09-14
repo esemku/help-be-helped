@@ -47,8 +47,8 @@ const Register = props => {
             />
           </div>
           <div className='form__checkbox-wrapper'>
-            <label className='checkbox'>
-              <input name='acceptTerms' type='checkbox' />
+            <label className='checkbox-label'>
+              <input name='acceptTerms' type='checkbox' className='checkbox' />
               I Agree the
               <NavLink to='' target="_blank" > terms and conditions</NavLink>
             </label>

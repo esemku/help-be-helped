@@ -32,13 +32,12 @@
   &__h1 {
     font-size: $font-size-26;
     font-weight: 500;
-    color: rgb(63, 66, 84);
+    color: $color-light-black;
     margin-bottom: 0;
   }
   &__p {
     color: rgb(181, 181, 195);
     font-weight: 500;
-    font-size: $font-size-13;
     margin-top: .6em;
   }
   &__btn-wrapper--primary {
@@ -46,7 +45,6 @@
   }
   &__btn {
     border-radius: $radius;
-    font-size: $font-size-13;
     font-weight: 500;
     height: 3.6em;
     width: 8.1em;
@@ -65,7 +63,23 @@
     }
   }
 
-  &__checkbox-wrapper {
-    align-self: flex-start;
+}
+
+
+/* Checkbox */
+.form__checkbox-wrapper {
+  align-self: flex-start;
+  font-size: 13px;
+  margin: .5rem 0 1rem;
+}
+.checkbox-label {
+  cursor: pointer;
+  color: $color-light-black;
+  a {
+    color: $color-blue;
+    font-weight: 400;
   }
+}
+.checkbox {
+  margin-right: .3rem;
 }
