@@ -1,0 +1,4 @@
+export const REGISTER_USER = 'AUTH_REGISTER_USER'
+
+export const ERROR = 'AUTH_ERROR'
+export const CLEAR_ERROR = 'AUTH_CLEAR_ERROR'

@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 // import styles from './Register.scss'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import { Formik } from 'formik'
+import { connect } from 'react-redux'
+import { registerUser } from '../../../../redux/actions/authActions'
 
 
-const Register = props => {
+const Register = ({ registerUser }) => {
+
+  const [userData, serUserData] = useState({
+    name: '',
+    email: '',
+    password: ''
+  })
+
+  const handleFormikSubmit = (e, name, email, password) => {
+    e.preventDefault()
+    registerUser({ name, email, password })
+  }
+
+
   return (
     <Formik
-      initialValues=''
+      initialValues={userData}
       validate={values => {
         const errors = {}
 
@@ -24,26 +39,40 @@ const Register = props => {
       		</div>
       		<div className='form__inputs-wrapper'>
       			<input
+              name='name'
               type='text'
               className='form__input'
-              placeholder='Fullname'
+              placeholder='Name'
+              value={values.name}
               onBlur={handleBlur}
               onChange={handleChange}
             />
       			<input
-              type='text'
+              name='email'
+              type='email'
               className='form__input'
               placeholder='Email'
+              value={values.email}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
             <input
-              type='text'
+              name='password'
+              type='password'
               className='form__input'
               placeholder='Password'
+              value={values.password}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
             <input
-              type='text'
+              name='confirmPassword'
+              type='password'
               className='form__input'
               placeholder='Confirm password'
+              value={values.confirmPassword}
+              onBlur={handleBlur}
+              onChange={handleChange}
             />
           </div>
           <div className='form__checkbox-wrapper'>
@@ -54,7 +83,15 @@ const Register = props => {
             </label>
           </div>
           <div className='form__btn-wrapper--primary'>
-            <NavLink to=''>
+            <NavLink
+              to=''
+              onClick={(e) => handleFormikSubmit(
+                e,
+                values.name,
+                values.email,
+                values.confirmPassword
+              )}
+            >
               <button type='submit' className='form__btn form__btn--submit'>
                 Submit
               </button>
@@ -69,5 +106,8 @@ const Register = props => {
   )
 }
 
+const mapDispatchToProps = {
+  registerUser
+}
 
-export default Register
+export default connect(null, mapDispatchToProps)(Register)
