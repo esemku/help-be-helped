@@ -15,7 +15,7 @@ const App = () => {
         {/* <Route exact path="/error" component={ErrorPage} /> */}
         {/* <Route exact path="/logout" component={Logout} /> */}
         <Route path='/auth' component={AuthWithLayout} />
-        <Route path='/' component={Home} />
+        <Route exact path='/' component={Home} />
       </Switch>
     </BrowserRouter>
   )

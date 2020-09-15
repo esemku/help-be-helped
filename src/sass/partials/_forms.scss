@@ -40,15 +40,20 @@
     font-weight: 500;
     margin-top: .6em;
   }
+
+  /*** Buttons ***/
   &__btn-wrapper--primary {
     margin: 10px 0 23px;
   }
   &__btn {
     border-radius: $radius;
     font-weight: 500;
-    height: 3.6em;
-    width: 8.1em;
+    height: 3rem;
+    width: 6.7rem;
     margin: 9.75px 13px;
+  }
+  &__btn--long {
+    width: 25rem;
   }
   &__btn--submit {
     background-color: $color-blue;

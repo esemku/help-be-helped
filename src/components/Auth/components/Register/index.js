@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import styles from './Register.scss'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import { Formik } from 'formik'

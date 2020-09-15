@@ -54,7 +54,7 @@ exports.registerController = (req, res) => {
       subject: 'Account activation link',
       html: `
         <h1>Please use the following to activate your account</h1>
-        <p>${process.env.CLIENT_URL}/users/activate/${token}</p>
+        <p>${process.env.CLIENT_URL}/auth/users/activate/${token}</p>
         <hr />
         <p>This email may containe sensetive information</p>
         <p>${process.env.CLIENT_URL}</p>
