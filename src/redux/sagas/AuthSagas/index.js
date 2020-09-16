@@ -1,7 +1,8 @@
 import { registerUserWatcher } from './registerUserSaga'
 import { activateUserWatcher } from './activateUserSaga'
+import { loginWatcher } from './loginSaga'
 
 
 export default [
-  registerUserWatcher(), activateUserWatcher()
+  registerUserWatcher(), activateUserWatcher(), loginWatcher()
 ]
