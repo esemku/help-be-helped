@@ -72,7 +72,7 @@ const Login = ({ login }) => {
               onChange={handleChange}
             />
         		<div className='login__forgot-pass'>
-              <NavLink to='/auth/forgot-password'>
+              <NavLink to='/auth/users/forget'>
                 <a href=''>Forgot Password ?</a>
               </NavLink>
               <NavLink

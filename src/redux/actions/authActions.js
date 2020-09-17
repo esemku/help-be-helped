@@ -1,4 +1,10 @@
-import { REGISTER_USER, ACTIVATE_USER, LOGIN } from '../constants/authConstants'
+import {
+    REGISTER_USER,
+    ACTIVATE_USER,
+    LOGIN,
+    FORGET_PASSWORD
+} from '../constants/authConstants'
+
 
 export const registerUser = ({ name, email, password }) => ({
   type: REGISTER_USER,
@@ -14,6 +20,8 @@ export const login = ({ email, password }) => ({
   email,
   password
 })
+
+export const forgetPassword = ({ email }) => ({ type: FORGET_PASSWORD, email })
 
 // export const logout = () => ({
 //   type: LOGOUT

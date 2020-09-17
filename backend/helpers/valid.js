@@ -32,7 +32,7 @@ exports.validLogin = [
 ]
 
 // Forget Password
-exports.forgotPasswordValidator = [
+exports.forgetPasswordValidator = [
     check('email')
         .not()
         .isEmpty()

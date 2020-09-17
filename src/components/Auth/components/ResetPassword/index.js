@@ -1,11 +1,17 @@
 import React from 'react'
-// import styles from './ForgotPassword.scss'
+// import styles from './ResetPassword.scss'
 import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import { Formik } from 'formik'
 
+//TO DO
+const ResetPassword = props => {
 
-const ForgotPassword = props => {
+  const handleFormikSubmit = (e) => {
+    console.log('siema');
+  }
+
+
   return (
     <Formik
       initialValues=''
@@ -32,7 +38,7 @@ const ForgotPassword = props => {
             />
           </div>
           <div className='form__btn-wrapper--primary'>
-            <NavLink to=''>
+            <NavLink onClick={(e) => handleFormikSubmit(e)}>
               <button type='submit' className='form__btn form__btn--submit'>
                 Submit
               </button>
@@ -48,4 +54,4 @@ const ForgotPassword = props => {
 }
 
 
-export default ForgotPassword
+export default ResetPassword
