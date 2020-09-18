@@ -24,12 +24,12 @@ const Activate = ({ match, activateUser }) => {
     }
   }, [match.params])
 
-  const handleFormikSubmit = (e, token) => {
+  const handleFormikSubmit = (e) => {
     e.preventDefault()
     activateUser({ token })
   }
 
-  const { name, token, show } = formData
+  const { name, token } = formData
 
   return (
     <Formik
@@ -47,7 +47,7 @@ const Activate = ({ match, activateUser }) => {
       			<h1 className='form__h1'>Welcome {name}</h1>
       		</div>
       		<div className='form__inputs-wrapper'>
-            <NavLink to='' onClick={(e) => handleFormikSubmit(e, token)}>
+            <NavLink to='' onClick={(e) => handleFormikSubmit(e)}>
               <button
                 type='submit'
                 className='form__btn form__btn--submit form__btn--long'
