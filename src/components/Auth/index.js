@@ -9,7 +9,6 @@ import ResetPassword from './components/ResetPassword'
 
 export const Auth = () => (
   <Switch>
-    {/* <Route path='/auth/change-password' component={ChangePassword} /> */}
     {/* <Route path='/auth/mfa' component={Mfa} /> */}
     <Route path='/auth/users/activate/:token' component={Activate} />
     <Route path='/auth/users/password/reset/:token' component={ResetPassword} />
@@ -17,7 +16,6 @@ export const Auth = () => (
     <Route path='/auth/register' component={Register} />
     <Route path='/auth/users/forget' component={ForgetPassword} />
     <Redirect exact from='/auth' to='/auth/login' />
-    {/* <Redirect to='/auth/login' /> */}
   </Switch>
 )
 
