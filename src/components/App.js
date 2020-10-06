@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './Home'
 import Auth from './Auth'
 import { withLayout } from './Auth/HOC/withLayout'
+import PrivateRoute from './routes/PrivateRoute'
+import AuthRoute from './routes/AuthRoute'
 
 
 const AuthWithLayout = withLayout(Auth)
@@ -14,8 +16,8 @@ const App = () => {
       <Switch>
         {/* <Route exact path="/error" component={ErrorPage} /> */}
         {/* <Route exact path="/logout" component={Logout} /> */}
-        <Route path='/auth' component={AuthWithLayout} />
-        <Route exact path='/' component={Home} />
+        <AuthRoute path='/auth' component={AuthWithLayout} />
+        <PrivateRoute path='/' component={Home} />
       </Switch>
     </BrowserRouter>
   )

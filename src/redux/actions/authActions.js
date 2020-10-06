@@ -3,7 +3,8 @@ import {
     ACTIVATE_USER,
     LOGIN,
     FORGET_PASSWORD,
-    RESET_PASSWORD
+    RESET_PASSWORD,
+    SET_LOGGED
 } from '../constants/authConstants'
 
 
@@ -29,6 +30,8 @@ export const resetPassword = ({ password, token }) => ({
   password,
   token
 })
+
+export const setLogged = ({ authData }) => ({ type: SET_LOGGED, authData })
 
 // export const logout = () => ({
 //   type: LOGOUT

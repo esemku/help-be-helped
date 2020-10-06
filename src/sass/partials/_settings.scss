@@ -1,9 +1,19 @@
+
+/*** COLORS ***/
+/* Main */
 $color-light: #fff;
 $color-mid-grey: #4c4e6f;
 $color-dark-grey: #1a1a27;
 $color-blue: rgb(54, 153, 255);
 $color-light-black: rgb(63, 66, 84);
+$gray-400: #D6D6E0;
 
+/* Validation colors */
+$color-warning: rgb(246, 78, 96);
+$color-success: rgb(27, 197, 189);
+
+/* Form colors */
+$color-inputBcg: rgb(243, 246, 249);
 $font-text: 'Poppins', sans-serif;
 $font-size-12: .75rem;
 $font-size-26: 1.6rem;

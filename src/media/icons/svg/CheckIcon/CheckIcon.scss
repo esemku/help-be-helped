@@ -1,0 +1,10 @@
+@import '../../../../sass/style.react.scss';
+
+
+.checkIcon {
+  svg {
+    g [fill] {
+      fill: $color-success;
+    }
+  }
+}

@@ -1,21 +1,21 @@
-@import '../../../../sass/style.scss';
+@import '../../../../sass/style.react.scss';
 
 .sideNavItems {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 
   &__title {
     color: $color-mid-grey;
-    font-size: .8em;
+    font-size: .8rem;
     font-weight: 500;
-    letter-spacing: .024em;
-    padding-left: 1.5em;
+    letter-spacing: .024rem;
+    padding-left: 1.5rem;
   }
 
   &__list-item {
     color: #a2a3b7;
     font-weight: 400;
-    font-size: .82em;
-    padding: 1.1em 1.5em;
+    font-size: $base-size;
+    padding: .8rem .8rem;
     transition: all .2s ease-in-out;
   }
   &__list-item:hover {
@@ -31,26 +31,21 @@
     }
   }
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
   &__i-item {
-    font-size: 1.3em;
-    padding-right: .5em;
+    font-size: 1.1rem;
+    padding: 0 .5rem;
     color: $color-mid-grey;
     transition: all .2s ease-in-out;
+    width: 1.8rem;
+    margin-right: .5rem;
   }
 
   &__i-angle {
     float: right;
-    font-size: 1em;
+    font-size: 1rem;
     color: $color-mid-grey;
     transition: all .2s ease-in-out;
+    padding-right: .5rem;
   }
-  i {
-    width: 1.8em;
-  }
+
 }

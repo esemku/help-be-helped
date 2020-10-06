@@ -1,14 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Home.scss';
-import PropTypes from 'prop-types';
 import Header from './Header';
 import SideNav from './SideNav';
-// import Container from '../Container';
-// import Footer from '../Footer';
-// import ScrollToTop from '../ScrollToTop';
+import { connect } from 'react-redux';
+import { isAuth, getCookie } from '../../helpers/auth'
+import { setLogged } from '../../redux/actions/authActions'
 
 
-const Home = props => {
+const Home = ({ setLogged }) => {
+
+  const [authData, setAuthData] = useState({})
+
+  useEffect(() => {
+    const { token } = getCookie()
+    const auth = isAuth()
+    setAuthData({ token, user: auth })
+  },[])
+
+  useEffect(() => {
+    const { token, user } = authData;
+    if(token && user) {
+      setLogged({ authData })
+    }
+  },[authData])
+
+
   return (
     <div className='home'>
       <SideNav />
@@ -20,5 +36,8 @@ const Home = props => {
   )
 }
 
+const mapDispatchToProps = {
+  setLogged
+}
 
-export default Home
+export default connect(null, mapDispatchToProps)(Home);

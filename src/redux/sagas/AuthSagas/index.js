@@ -3,6 +3,7 @@ import { activateUserWatcher } from './activateUserSaga'
 import { loginWatcher } from './loginSaga'
 import { forgetPasswordWatcher } from './forgetPasswordSaga'
 import { resetPasswordWatcher } from './resetPasswordSaga'
+import { authWatcher } from './authSaga'
 
 
 export default [
@@ -10,5 +11,6 @@ export default [
   activateUserWatcher(),
   loginWatcher(),
   forgetPasswordWatcher(),
-  resetPasswordWatcher()
+  resetPasswordWatcher(),
+  authWatcher()
 ]

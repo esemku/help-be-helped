@@ -1,16 +1,16 @@
-@import '../../../sass/style.scss';
+@import '../../../sass/style.react.scss';
 
 .sideNav {
   height: 100vh;
-  width: 16.5em;
+  width: 16.5rem;
   background-color: #1f1f2f;
 
   &__logo {
     color: $color-light;
     background-color: $color-dark-grey;
-    padding: 1.4em;
-    margin-bottom: 2em;
+    padding: 1.4rem;
+    margin-bottom: 2rem;
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
 }

@@ -4,3 +4,11 @@
 
 @import 'partials/elements';
 @import 'partials/forms';
+
+
+// Theme mixins
+@import 'components/mixins/spinner';
+
+
+// Global variables
+@import 'components/variables.bootstrap';

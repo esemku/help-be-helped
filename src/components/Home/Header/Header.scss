@@ -1,6 +1,11 @@
-@import '../../../sass/style.scss';
+@import '../../../sass/style.react.scss';
 
 .header {
   border-bottom: 1px solid #EBEDF3;
   height: 4em;
+}
+
+.signout {
+  float: right;
+  margin: 1rem;
 }
