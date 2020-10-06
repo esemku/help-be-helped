@@ -45,9 +45,6 @@ const Login = ({ login, status, status_type, error, error_type, auth, history, i
     }
   },[error])
 
-  useEffect(() => {
-    console.log('intl: ', intl);
-  },[intl])
 
   return (
     <Formik
@@ -97,10 +94,10 @@ const Login = ({ login, status, status_type, error, error_type, auth, history, i
                 onBlur={handleBlur}
                 onChange={handleChange}
               />
-                <div className='form__icon-wrapper'>
-                  {errors.email && <OutlineInfoIcon />}
-                  {touched.email && !errors.email && <CheckIcon />}
-                </div>
+              <div className='form__icon-wrapper'>
+                {errors.email && <OutlineInfoIcon />}
+                {touched.email && !errors.email && <CheckIcon />}
+              </div>
               {errors.email && <div className='form__input-msg'>{errors.email}</div>}
             </div>
       			<div className='form__input-wrapper'>

@@ -22,7 +22,6 @@ export function* fetchLogin({ email, password }) {
     yield put({ type: STATUS, msg: response.status, req: 'LOGIN' })
     yield put({ type: SET_AUTH, msg: response.data })
   } catch (err) {
-    console.log(err.response)
     yield put({ type: ERROR, msg: err.response.data.errors, req: 'LOGIN' })
   }
   yield put({ type: CLEAR_ERROR })
