@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 import styles from './SideNavItems.scss'
 
 
@@ -10,11 +11,13 @@ const SideNavItems = props => {
       list: [
         {
           title: 'Want to Help',
-          icon: 'fas fa-hands-helping'
+          icon: 'fas fa-hands-helping',
+          link: '/want-to-help'
         },
         {
           title: 'Need Help',
-          icon: 'far fa-life-ring'
+          icon: 'far fa-life-ring',
+          link: '/need-help'
         }
       ]
     },
@@ -46,11 +49,13 @@ const SideNavItems = props => {
             <ul>
               {item.list.map(l => {
                 return (
-                  <li className='sideNavItems__list-item'>
-                    <i className={`sideNavItems__i-item ${l.icon}`}></i>
-                    {l.title}
-                    <i class="fas fa-angle-right sideNavItems__i-angle"></i>
-                  </li>
+                  <NavLink to={l.link} key={l.title}>
+                    <li className='sideNavItems__list-item'>
+                      <i className={`sideNavItems__i-item ${l.icon}`}></i>
+                      {l.title}
+                      <i class="fas fa-angle-right sideNavItems__i-angle"></i>
+                    </li>
+                  </NavLink>
                 )
               })}
             </ul>

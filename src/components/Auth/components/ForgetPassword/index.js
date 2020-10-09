@@ -48,12 +48,12 @@ const ForgetPassword = ({ forgetPassword }) => {
           </div>
           <div className='form__btn-wrapper--primary'>
             <NavLink onClick={(e) => handleFormikSubmit(e, values.email)}>
-              <button type='submit' className='form__btn form__btn--submit'>
+              <button type='submit' className='form__btn form__btn--submit ripple'>
                 Submit
               </button>
             </NavLink>
             <NavLink to='/auth/login'>
-              <button className='form__btn form__btn--cancel'>Cancel</button>
+              <button className='form__btn form__btn--cancel ripple'>Cancel</button>
             </NavLink>
           </div>
         </form>

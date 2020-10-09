@@ -67,12 +67,27 @@
     width: 7rem;
     margin: 9.75px 13px;
   }
+  .ripple {
+    background-position: center;
+    transition: background 0.5s;
+  }
+  .ripple:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
   &__btn--long {
     width: 25rem;
   }
   &__btn--submit {
     background-color: $color-blue;
     color: $color-light;
+    &:hover {
+      background-color: $color-blue-hover;
+    }
   }
   &__btn--cancel {
     background-color: rgb(225, 240, 255);
