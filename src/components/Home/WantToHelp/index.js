@@ -4,7 +4,7 @@ import React from 'react'
 const WantToHelp = () => {
   return (
     <div>
-      WantToHelp!!!:
+      WantToHelp!!!
     </div>
   )
 }
