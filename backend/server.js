@@ -4,15 +4,22 @@ const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
+const http = require('http')
+const socketio = require('socket.io')
+
 
 require('dotenv').config()
 
+
+
 const app = express()
+const server = http.createServer(app)
+const io = socketio(server)
 const PORT = process.env.PORT
+
 
 // Use bodyParser
 app.use(bodyParser.json())
-
 
 // Config for only development
 if(process.env.NODE_ENV === 'development'){
@@ -40,6 +47,12 @@ app.use((req, res, next) => {
   })
 })
 
+
+// Socket for chat
+io.on('connection', socket => {
+  socket.emit('chat-message', 'Hello World')
+})
+
 // app.use(cors())//(corsOptions));
 // app.use(express.json())
 
@@ -60,3 +73,5 @@ connection.once('open', () => {
 app.listen(PORT, () => {
   console.log(`Server is listening on port: ${PORT}`)
 })
+
+server.listen(process.env.SERVER_PORT, () => console.log(`Chat server has started.`))

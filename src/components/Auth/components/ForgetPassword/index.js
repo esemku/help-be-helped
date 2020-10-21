@@ -5,9 +5,13 @@ import { NavLink } from 'react-router-dom'
 import { Formik } from 'formik'
 import { connect } from 'react-redux'
 import { forgetPassword } from '../../../../redux/actions/authActions'
+import Button from '@material-ui/core/Button'
+import { useStyles } from './styles'
 
 
 const ForgetPassword = ({ forgetPassword }) => {
+
+  const classes = useStyles()
 
   const [userData, setUserData] = useState({
     email: ''
@@ -48,9 +52,12 @@ const ForgetPassword = ({ forgetPassword }) => {
           </div>
           <div className='form__btn-wrapper--primary'>
             <NavLink onClick={(e) => handleFormikSubmit(e, values.email)}>
-              <button type='submit' className='form__btn form__btn--submit ripple'>
+              <Button className={classes.btn}>
                 Submit
-              </button>
+              </Button>
+              {/* <button type='submit' className='form__btn form__btn--submit ripple'>
+
+              </button> */}
             </NavLink>
             <NavLink to='/auth/login'>
               <button className='form__btn form__btn--cancel ripple'>Cancel</button>
