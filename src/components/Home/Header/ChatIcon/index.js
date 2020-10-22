@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStyles } from './styles'
+import { NavLink } from 'react-router-dom'
 
 import GroupChatIcon from '../../../../media/icons/svg/GroupChatIcon'
 
@@ -9,7 +10,9 @@ const ChatIcon = () => {
 
   return (
     <div className={classes.root}>
-      <GroupChatIcon />
+      <NavLink to='/chat'>
+        <GroupChatIcon />
+      </NavLink>
     </div>
   )
 }

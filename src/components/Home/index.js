@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom'
-import styles from './Home.scss'
+import { useStyles } from './styles'
 import { connect } from 'react-redux'
 import { isAuth, getCookie } from '../../helpers/auth'
 import { setLogged } from '../../redux/actions/authActions'
 
 import Header from './Header'
+import Footer from './Footer'
 import SideNav from './SideNav'
 import WantToHelp from './WantToHelp'
 import NeedHelp from './NeedHelp'
+import Chat from './Chat'
 
 
 const Home = ({ setLogged }) => {
+  const classes = useStyles()
 
   const [authData, setAuthData] = useState({})
 
@@ -30,14 +33,18 @@ const Home = ({ setLogged }) => {
 
 
   return (
-    <div className='home'>
+    <div className={classes.root}>
       <SideNav />
-      <div className='container'>
+      <div className={classes.container}>
         <Header />
-        <Switch>
-          <Route path='/want-to-help' component={WantToHelp} />
-          <Route path='/need-help' component={NeedHelp} />
-        </Switch>
+        <main className={classes.content}>
+          <Switch>
+            <Route path='/want-to-help' component={WantToHelp} />
+            <Route path='/need-help' component={NeedHelp} />
+            <Route path='/chat' component={Chat} />
+          </Switch>
+        </main>
+        <Footer />
       </div>
     </div>
   )
