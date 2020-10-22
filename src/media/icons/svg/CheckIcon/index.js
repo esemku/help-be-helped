@@ -1,10 +1,12 @@
 import React from 'react'
-import styles from './CheckIcon.scss'
+import { useStyles } from './styles'
 
 
 const CheckIcon = () => {
+	const classes = useStyles()
+
 	return (
-		<div className='checkIcon'>
+		<div className={classes.root}>
 			<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsxlink="http://www.w3.org/1999/xlink">
 			    <title>Stockholm-icons / Navigation / Check</title>
 			    <desc>Created with Sketch.</desc>

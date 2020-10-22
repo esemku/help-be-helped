@@ -4,6 +4,7 @@ import { signOut } from '../../../helpers/auth'
 import { useStyles } from './styles'
 
 import ProfileIcon from './ProfileIcon'
+import ChatIcon from './ChatIcon'
 
 
 const Header = ({ user }) => {
@@ -19,7 +20,8 @@ const Header = ({ user }) => {
     <div className={classes.root}>
       <div className={classes.container}>
         <div></div>
-        <div classname={classes.iconsWrapper}>
+        <div className={classes.iconsWrapper}>
+          <ChatIcon />
           <ProfileIcon signOut={handleSignOut} user={user} />
         </div>
       </div>

@@ -15,5 +15,9 @@ export const useStyles = makeStyles((theme) =>
       display: 'flex',
       justifyContent: 'space-between'
     },
+    iconsWrapper: {
+      display: 'flex',
+      alignItems: 'center'
+    }
   }),
 )

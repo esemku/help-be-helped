@@ -1,11 +1,13 @@
-///////////////////////////////////////////////////////////////
-///////////// DO NOT MODIFY BELOW INCLUDE ORDER ////////////////
-////////////////////////////////////////////////////////////////
+// Theme mixins
+@import 'components/mixins/spinner';
 
-// Initialize
-@import "init";
 
+// Global variables
+@import 'components/variables.bootstrap';
 
 // Components
-@import
-    "components/spinner";    
+@import "components/spinner";
+
+
+@import 'partials/settings';
+@import 'partials/forms';
